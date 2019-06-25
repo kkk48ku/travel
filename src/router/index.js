@@ -1,15 +1,18 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
+import Home from '@/pages/home/Home'
 
 Vue.use(Router)
-
+// TODO:路由懒加载
+/* function loadPage(page){
+  return ()=> import (`@/pages/${page}/${page}.vue`)
+} */
 export default new Router({
   routes: [
     {
       path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
+      name: 'Home',
+      component: Home
     }
   ]
 })
