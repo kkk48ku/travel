@@ -9,6 +9,7 @@
           <p class="icon-desc">{{ item.desc }}</p>
         </div>
       </swiper-slide>
+      <div class="swiper-pagination" slot="pagination"></div>
     </swiper>
   </div>
 </template>
@@ -18,7 +19,12 @@ export default {
   name: 'HeaderIcons',
   data () {
     return {
-      swiperOption: {},
+      swiperOption: {
+        /* 分页器设置 */
+        pagination: '.swiper-pagination',
+        /* 圆点点击切换 */
+        paginationClickable: true
+      },
       iconList: [
         {
           id: '0001',
@@ -94,7 +100,8 @@ export default {
 @import '~$styles/mixins.styl'
 
 .icons >>> .swiper-container
-  padding-bottom 50%
+  padding-top 1.3%
+  padding-bottom 58%
   height 0
 .icon
   overflow hidden
