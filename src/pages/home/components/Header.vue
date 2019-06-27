@@ -47,7 +47,7 @@ export default {
     margin-left 0.2rem
     padding-left 0.1rem
     background-color #fff
-    border-radius 0.1rem
+    border-radius $borderRadius
     color #ccc
     .search-icon
       font-size 0.4rem

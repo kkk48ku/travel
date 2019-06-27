@@ -63,7 +63,7 @@ export default {
       margin-top 0.16rem
       background #ff9300
       padding 0 0.2rem
-      border-radius 0.06rem
+      border-radius $borderRadius
       color #fff
       font-family '微软雅黑'
 .seeAll
