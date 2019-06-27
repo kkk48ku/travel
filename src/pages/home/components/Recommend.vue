@@ -36,7 +36,7 @@ export default {
 
 .title
   line-height 0.8rem
-  background #eee
+  background $titleBgColor
   text-indent 0.2rem
 .item
   overflow hidden
