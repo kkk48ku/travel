@@ -20,7 +20,7 @@ export default {
     return {
       showAbs: true,
       opacityStyle: {
-        // opacity: 0
+        opacity: 0
       }
     }
   },
@@ -40,6 +40,13 @@ export default {
   },
   activated () {
     window.addEventListener('scroll', this.handleWindowScroll)
+  },
+  /*
+    解绑scroll全局事件
+    deactivated生命周期函数表示离开组件
+   */
+  deactivated () {
+    window.removeEventListener('scroll', this.handleWindowScroll)
   }
 }
 </script>
