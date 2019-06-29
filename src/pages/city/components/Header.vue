@@ -19,6 +19,7 @@ export default {
 .header
   position relative
   overflow hidden
+  height $headerHeight
   line-height $headerHeight
   text-align center
   color #fff
