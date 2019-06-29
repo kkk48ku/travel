@@ -63,8 +63,8 @@ export default {
     left 0
     right 0
     bottom 0
-    height 0.7rem
-    line-height 0.7rem
+    height 1rem
+    line-height 1rem
     color #fff
     background-image linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8))
     .banner-title
@@ -75,7 +75,7 @@ export default {
       height 0.32rem
       line-height 0.32rem
       padding 0 0.2rem
-      margin 0.2rem 0.1rem 0 0
+      margin 0.35rem 0.1rem 0 0
       border-radius 0.2rem
       background rgba(0, 0, 0, 0.5)
       font-size 0.24rem

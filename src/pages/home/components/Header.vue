@@ -31,6 +31,7 @@ export default {
 
 .header
   display flex
+  height $headerHeight
   line-height $headerHeight
   background-color $bgColor
   color #fff
@@ -51,9 +52,9 @@ export default {
     border-radius $borderRadius
     color #ccc
     .search-icon
-      font-size 0.4rem
       float left
       padding 0 0.1rem
+      font-size 0.4rem
   .header-right
     min-width 1.04rem
     padding 0 0.1rem
