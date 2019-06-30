@@ -17,7 +17,7 @@
         </div>
       </router-link>
     </ul>
-    <button class="seeAll">
+    <button class="seeAll border-top">
       查看全部产品
     </button>
   </div>

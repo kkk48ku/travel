@@ -8,6 +8,7 @@
     <detail-header></detail-header>
     <detail-info></detail-info>
     <detail-list :list="categoryList"></detail-list>
+    <common-footer></common-footer>
   </div>
 </template>
 
@@ -16,6 +17,7 @@ import DetailBanner from './components/Banner'
 import DetailHeader from './components/Header'
 import DetailInfo from './components/Info'
 import DetailList from './components/List'
+import CommonFooter from '$common/footer/Footer'
 export default {
   name: 'Detail',
   data () {
@@ -31,7 +33,8 @@ export default {
     DetailBanner,
     DetailHeader,
     DetailInfo,
-    DetailList
+    DetailList,
+    CommonFooter
   },
   methods: {
     getDetailInfo () {

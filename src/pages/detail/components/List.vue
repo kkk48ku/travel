@@ -6,7 +6,6 @@
         {{ item.title }}
       </div>
       <div v-if="item.children" class="item-childern">
-        <!-- TODO: 点击展开全部item计算显示两个展开速度慢-->
         <div
           v-for="(item, index) of item.children.slice(
             0,
