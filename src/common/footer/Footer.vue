@@ -47,7 +47,7 @@
         <span class="item active">触屏版</span>
         <span class="item">电脑版</span>
       </div>
-      <div class="content">YuMi 学习仿制08940984 <span>意见反馈</span></div>
+      <div class="content">Bovine 学习仿制08940984 <span>意见反馈</span></div>
     </div>
   </div>
 </template>

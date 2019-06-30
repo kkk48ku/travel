@@ -5,11 +5,9 @@ import City from '@/pages/city/City'
 import Detail from '@/pages/detail/Detail'
 
 Vue.use(Router)
-// TODO:路由懒加载
-/* function loadPage(page){
-  return ()=> import (`@/pages/${page}/${page}.vue`)
-} */
+
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',
