@@ -10,16 +10,19 @@
         </div>
       </div>
     </div>
-    <common-gallary
-      :images="imgList"
-      v-show="showGallary"
-      @close="handleGallaryClose"
-    ></common-gallary>
+    <common-animation>
+      <common-gallary
+        :images="imgList"
+        v-show="showGallary"
+        @close="handleGallaryClose"
+      ></common-gallary>
+    </common-animation>
   </div>
 </template>
 
 <script>
 import CommonGallary from '$common/gallary/Gallary'
+import CommonAnimation from '$common/animation/animation'
 export default {
   name: 'DetailBanner',
   props: {
@@ -42,7 +45,8 @@ export default {
     }
   },
   components: {
-    CommonGallary
+    CommonGallary,
+    CommonAnimation
   }
 }
 </script>

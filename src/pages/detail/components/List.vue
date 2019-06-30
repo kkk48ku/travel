@@ -45,11 +45,6 @@ export default {
   props: {
     list: Array
   },
-  /* data () {
-    return {
-      filterNumber: 2
-    }
-  }, */
   computed: {
     newList () {
       let newList = []
