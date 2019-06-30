@@ -15,7 +15,7 @@
 <script>
 
 export default {
-  name: 'DeatilHeader',
+  name: 'DetailHeader',
   data () {
     return {
       showAbs: true,

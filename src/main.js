@@ -5,7 +5,6 @@ import App from './App'
 import router from './router'
 import fastClick from 'fastclick'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
-import DetailList from '@/pages/detail/components/List'
 import store from './store'
 import axios from 'axios'
 import '$styles/reset.css'
@@ -18,7 +17,6 @@ Vue.config.productionTip = false
 fastClick.attach(document.body)
 Vue.use(VueAwesomeSwiper)
 Vue.prototype.axios = axios
-Vue.component('DetailList', DetailList)
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

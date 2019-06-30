@@ -1,12 +1,19 @@
 <template>
   <div class="wrapper">
-    <div class="item" v-for="(item, index) of list" :key="index">
+    <div class="item" v-for="(item, index) of newList" :key="index">
       <div class="item-title border-bottom">
         <span class="item-title-icon"></span>
         {{ item.title }}
       </div>
       <div v-if="item.children" class="item-childern">
-        <div v-for="(item, index) of item.children" :key="index">
+        <!-- TODO: 点击展开全部item计算显示两个展开速度慢-->
+        <div
+          v-for="(item, index) of item.children.slice(
+            0,
+            item.children.filterNumber
+          )"
+          :key="index"
+        >
           <div class="item-info">
             <div class="item-title">
               {{ item.title }}
@@ -19,7 +26,11 @@
             </div>
           </div>
         </div>
-        <div class="seeAll" v-show="isShowBtn(item.children)">
+        <div
+          class="seeAll"
+          v-show="isShowBtn(item.children)"
+          @click="showAll(item)"
+        >
           查看剩余产品
           <span class="iconfont arrow-down-icon">&#xe612;</span>
         </div>
@@ -30,13 +41,31 @@
 
 <script>
 export default {
-  name: 'DeatilList',
+  name: 'DetailList',
   props: {
     list: Array
   },
+  /* data () {
+    return {
+      filterNumber: 2
+    }
+  }, */
+  computed: {
+    newList () {
+      let newList = []
+      this.list.forEach(element => {
+        this.$set(element['children'], 'filterNumber', 2)
+        newList.push(element)
+      })
+      return newList
+    }
+  },
   methods: {
     isShowBtn (item) {
-      return item.length > 2 ? -1 : 0
+      return item.length > 2 && item.length !== item.filterNumber
+    },
+    showAll (item) {
+      this.$set(item.children, 'filterNumber', item.children.length)
     }
   }
 }
@@ -95,9 +124,11 @@ export default {
         .price-icon
           color #ff9800
           font-size 0.24rem
+          margin-right -0.05rem
         .number
           color #ff9800
           font-size 0.42rem
+          margin-right 0.03rem
   .seeAll
     height 0.8rem
     line-height 0.6rem

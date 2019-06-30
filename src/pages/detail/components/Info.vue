@@ -24,7 +24,7 @@
 <script>
 
 export default {
-  name: 'DeatilInfo'
+  name: 'DetailInfo'
 }
 </script>
 
